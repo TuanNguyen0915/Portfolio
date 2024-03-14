@@ -80,5 +80,5 @@
   @apply mb-8 text-lg font-light text-muted-foreground;
 }
 .section-title {
-  @apply before:bg-dots_light before:dark:bg-dots_dark relative flex w-max items-center justify-between gap-4 text-4xl font-bold before:h-[24px] before:w-[24px] before:bg-center before:bg-no-repeat;
+  @apply before:bg-dots_light before:dark:bg-dots_dark relative flex w-max items-center justify-between gap-4 text-5xl font-bold before:h-[24px] before:w-[24px] before:bg-center before:bg-no-repeat;
 }

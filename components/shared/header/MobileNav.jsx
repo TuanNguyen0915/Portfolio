@@ -23,7 +23,7 @@ const MobileNav = () => {
         <AlignJustify className="cursor-pointer" />
       </SheetTrigger>
       <SheetContent>
-        <div className="flex h-full flex-col overflow-hidden py-10">
+        <div className="flex h-full flex-col overflow-y-auto py-10">
           <div className="mb-20 w-full">
             <Logo />
           </div>

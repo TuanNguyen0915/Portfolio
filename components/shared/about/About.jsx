@@ -1,6 +1,9 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import AboutImg from "./AboutImg"
 import Image from "next/image"
+import InfoTab from "./InfoTab"
+import QualificationsTab from "./QualificationsTab"
+import SkillsTab from "./SkillsTab"
 
 const About = () => {
   return (
@@ -11,7 +14,7 @@ const About = () => {
         </h2>
         <AboutImg />
         <div className="mt-10 flex w-full justify-between gap-4">
-          <div className="bg-hero_shape relative hidden min-h-[600px] min-w-[600px] items-center justify-center bg-center bg-no-repeat lg:flex">
+          <div className="bg-hero_shape relative bottom-0 hidden h-[500px] w-[500px] items-center justify-center bg-center bg-no-repeat lg:flex xl:min-h-[500px] xl:min-w-[600px]">
             <Image
               src="/about/about.png"
               alt="photo"
@@ -20,15 +23,21 @@ const About = () => {
             />
           </div>
           <Tabs defaultValue="personal" className="flex-1">
-            <TabsList>
-              <TabsTrigger value="personal">Personal Info</TabsTrigger>
-              <TabsTrigger value="qualifications">Qualifications</TabsTrigger>
-              <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-3 rounded-full dark:border-none lg:border">
+              <TabsTrigger className="w-auto" value="personal">
+                Personal Info
+              </TabsTrigger>
+              <TabsTrigger className="w-auto" value="qualifications">
+                Qualifications
+              </TabsTrigger>
+              <TabsTrigger className="w-auto" value="skills">
+                Skills
+              </TabsTrigger>
             </TabsList>
             <div className="mt-12 text-lg xl:mt-8">
-              <TabsContent value="personal">Tuan Nguyen</TabsContent>
-              <TabsContent value="qualifications">Tuan Qualify</TabsContent>
-              <TabsContent value="skills">Tuan Nguyen skills</TabsContent>
+              <InfoTab />
+              <QualificationsTab />
+              <SkillsTab />
             </div>
           </Tabs>
         </div>

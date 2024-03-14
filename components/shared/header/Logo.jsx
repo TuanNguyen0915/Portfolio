@@ -15,12 +15,11 @@ const Logo = () => {
   return (
     <>
       {src && (
-        <Link href="/" className="transition-all duration-500 hover:scale-110">
+        <Link href="/" className="relative w-[150px] h-[80px] transition-all duration-500 hover:scale-110">
           <Image
             src={src}
             alt="logo"
-            width={150}
-            height={150}
+            fill
             className="object-contain"
           />
         </Link>
