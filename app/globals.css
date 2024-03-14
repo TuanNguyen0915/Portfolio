@@ -71,12 +71,14 @@
 }
 
 .logo {
-  font-family: var(--font-free-hand);
+  @apply before:bg-logo_light before:dark:bg-logo_dark before:h-[30px] before:w-[30px] before:bg-center before:bg-no-repeat;
 }
-
 .h1 {
   @apply text-6xl font-bold tracking-[-2px] xl:text-[72px] xl:leading-[80px];
 }
 .subtitle {
   @apply mb-8 text-lg font-light text-muted-foreground;
+}
+.section-title {
+  @apply before:bg-dots_light before:dark:bg-dots_dark relative flex w-max items-center justify-between gap-4 text-4xl font-bold before:h-[24px] before:w-[24px] before:bg-center before:bg-no-repeat;
 }
