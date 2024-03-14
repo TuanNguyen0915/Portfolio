@@ -10,7 +10,7 @@ const HeroImg = () => {
           alt="avatar"
           width={320}
           height={320}
-          className="rounded-full pb-5"
+          className="rounded-full pb-8"
         />
       </div>
     </div>

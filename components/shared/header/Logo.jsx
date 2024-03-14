@@ -6,8 +6,7 @@ import Link from "next/link"
 const Logo = () => {
   const { theme } = useTheme()
   return (
-    <Link href="/">
-      {/* <Image src='/logo.svg' alt='logo' width={54} height={54} priority /> */}
+    <Link href="/" className="transition-all duration-500 hover:scale-110">
       {theme === "dark" ? (
         <Image
           src="/Tuan_signature_w.png"

@@ -7,7 +7,7 @@ import HeroImg from "./HeroImg"
 const Hero = () => {
   return (
     <section className="h-[84vh] bg-hero bg-cover bg-bottom bg-no-repeat py-12 dark:bg-none xl:py-24 xl:pt-28">
-      <div className="container mx-auto">
+      <div className="container mx-auto xl:mt-20 mt-5">
         <div className="flex justify-between gap-8">
           <div className="mx-auto flex max-w-[600px] flex-col justify-center text-center lg:mx-0 lg:text-left">
             {/* DESC */}
@@ -17,7 +17,7 @@ const Hero = () => {
               <Social />
             </div>
           </div>
-          <div className="relative hidden lg:flex">
+          <div className="relative hidden md:flex">
             <HeroImg />
           </div>
         </div>

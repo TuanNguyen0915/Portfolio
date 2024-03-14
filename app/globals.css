@@ -70,6 +70,10 @@
   }
 }
 
+.logo {
+  font-family: var(--font-free-hand);
+}
+
 .h1 {
   @apply text-6xl font-bold tracking-[-2px] xl:text-[72px] xl:leading-[80px];
 }
