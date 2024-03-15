@@ -8,7 +8,7 @@ import SkillsTab from "./SkillsTab"
 const About = () => {
   return (
     <section>
-      <div className="container mx-auto">
+      <div className="relative container mx-auto">
         <h2 className="section-title mx-auto mb-8 text-center lg:mb-16">
           About me
         </h2>
