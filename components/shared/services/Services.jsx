@@ -24,15 +24,15 @@ const Services = () => {
                 </div>
               </CardHeader>
               <CardContent className="text-center">
-                <CardTitle className="mb-4 capitalize tracking-[4px]">
+                <CardTitle className="mb-4 font-extrabold capitalize tracking-[2px]">
                   {item.title}
                 </CardTitle>
 
-                <div className="grid grid-cols-2 gap-4 text-start lg:gap-8 mt-6">
+                <div className="mt-6 grid grid-cols-2 gap-4 text-start lg:gap-8">
                   {item.description.map((item, idx) => (
                     <CardDescription
                       key={idx}
-                      className="text-base w-full lg:text-lg lg:font-semibold"
+                      className="w-full text-base lg:text-lg lg:font-semibold"
                     >
                       {item}
                     </CardDescription>

@@ -28,7 +28,7 @@ const MobileNav = () => {
             <Logo />
           </div>
           <div className="flex-1">
-            <Nav containerStyles="flex flex-col gap-4" linkStyles="text-2xl" />
+            <Nav containerStyles="flex flex-col gap-10 px-6" linkStyles="text-2xl" />
           </div>
           <Social mobileNav={true} />
         </div>

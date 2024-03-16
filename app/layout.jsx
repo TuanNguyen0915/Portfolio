@@ -21,9 +21,11 @@ export default function RootLayout({ children }) {
           defaultTheme="light"
           disableTransitionOnChange
         >
-          <Header />
-          {children}
-          <Footer />
+          <main className="flex min-h-screen flex-col justify-between">
+            <Header />
+            <div className="flex-1">{children}</div>
+            <Footer />
+          </main>
         </ThemeProvider>
       </body>
     </html>

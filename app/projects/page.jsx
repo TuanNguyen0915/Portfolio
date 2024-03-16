@@ -24,11 +24,9 @@ const ProjectPage = () => {
   }, [category])
 
   return (
-    <section className="my-12 min-h-[80vh] pt-12">
+    <section className="my-12">
       <div className="container mx-auto">
-        <h2 className="section-title mx-auto mb-8 text-center xl:mb-16">
-          My Projects
-        </h2>
+        <h1 className="h1 mx-auto mb-8 text-center xl:mb-16">My Projects</h1>
         <Tabs defaultValue={category}>
           <TabsList className="mx-auto mb-12 grid h-full w-full grid-cols-1 rounded-full dark:border-none md:grid-cols-4 md:border">
             {categories.map((item, idx) => (

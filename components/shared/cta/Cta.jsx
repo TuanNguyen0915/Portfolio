@@ -3,16 +3,16 @@ import Link from "next/link"
 
 const Cta = () => {
   return (
-    <section className="mt-12 bg-tertiary p-24 dark:bg-secondary/40 xl:mt-32">
-      <div className="container mx-auto">
-        <div className="flex flex-col items-center">
-          <h2 className="mb-8  max-w-xl text-center text-5xl md:max-w-2xl xl:max-w-4xl">
-            Get in touch
-          </h2>
-          <Link href="/contact">
-            <Button>Contact me</Button>
-          </Link>
-        </div>
+    <section className="mt-12 bg-tertiary py-8 dark:bg-secondary/40 xl:mt-32">
+      <div className="container mx-auto flex w-full flex-col items-center justify-between gap-8">
+        <h2 className="section-title">Get in touch</h2>
+        <p className="text-justify text-lg text-muted-foreground">
+          I take great pleasure in collaborating with passionate and committed
+          individuals who strive to make the world a better place
+        </p>
+        <Link href="/contact">
+          <Button>Contact me</Button>
+        </Link>
       </div>
     </section>
   )

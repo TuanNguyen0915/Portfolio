@@ -49,14 +49,14 @@ const QualificationsTab = () => {
                   (item, idx) => (
                     <div
                       key={idx}
-                      className="group flex min-h-[150px] gap-4 max-lg:h-auto"
+                      className="group flex min-h-[180px] gap-4 max-lg:h-auto"
                     >
                       <div className="relative h-auto w-[1px] py-4 max-lg:hidden">
                         <div className="h-auto w-[1px] bg-muted-foreground"></div>
                         <div className="absolute -left-1 top-4 h-[10px] w-[10px] rounded-full bg-primary transition-all duration-500 group-hover:translate-y-[118px]"></div>
                       </div>
-                      <div className="flex w-full flex-col items-center justify-center gap-2 border-b border-border">
-                        <div className="flex w-full items-center justify-between">
+                      <div className="flex w-full flex-col justify-between gap-2 pb-8 border-b border-border">
+                        <div className="flex w-full items-center justify-between py-2">
                           <p className=" flex-1 text-left font-medium">
                             {item.company}
                           </p>
