@@ -1,52 +1,24 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+"use client"
+import { TabsContent } from "@/components/ui/tabs"
 import { skillData } from "@/lib/constants"
-
+import { motion } from "framer-motion"
 const SkillsTab = () => {
   const getData = (arr, title) => {
     return arr.find((item) => item.title === title)
   }
   return (
     <TabsContent value="skills">
-      <div className="rounded-xl bg-orange-200/30 p-4 text-center backdrop-blur-lg backdrop-filter dark:bg-indigo-950/40 lg:text-left">
+      <motion.div
+        initial={{ x: 10, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: -10, opacity: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="rounded-xl bg-orange-200/30 p-4 text-center backdrop-blur-lg backdrop-filter dark:bg-secondary/40 lg:text-left"
+      >
         <h3 className="my-8 text-center text-2xl font-bold capitalize">
-          Tools I Use everyday
+          Tools I Use For Work
         </h3>
         <div className="flex flex-col gap-4">
-          {/* <Tabs defaultValue={getData(skillData, "skills").title}>
-            <TabsList className="grid w-full grid-cols-2 rounded-full dark:border-none lg:border">
-              <TabsTrigger
-                className="flex w-auto items-center justify-center gap-6 capitalize"
-                value={getData(skillData, "skills").title}
-              >
-                {getData(skillData, "skills").title}
-              </TabsTrigger>
-              <TabsTrigger
-                className="flex w-auto items-center justify-center gap-6 capitalize"
-                value={getData(skillData, "tools").title}
-              >
-                {getData(skillData, "tools").title}
-              </TabsTrigger>
-            </TabsList>
-            <TabsContent value={getData(skillData, "skills").title}>
-              <div className="mt-4 flex w-full flex-col gap-8">
-                {getData(skillData, "skills").data.map((item, idx) => (
-                  <p key={idx}>{item.name}</p>
-                ))}
-              </div>
-            </TabsContent>
-            <TabsContent value={getData(skillData, "tools").title}>
-              <div className="mt-4 flex w-full flex-col gap-8">
-                {getData(skillData, "tools").data.map((item, idx) => {
-                  const Icon = item.icon
-                  return (
-                    <div key={idx}>
-                      <Icon size={24} />
-                    </div>
-                  )
-                })}
-              </div>
-            </TabsContent>
-          </Tabs> */}
           <div className="flex w-full flex-col gap-4 border-b border-border p-4">
             <p className="text-xl font-semibold capitalize text-primary">
               {getData(skillData, "skills").title}
@@ -68,14 +40,14 @@ const SkillsTab = () => {
                 const Icon = item.icon
                 return (
                   <div key={idx}>
-                    <Icon className="size-8 lg:size-12" />
+                    <Icon className="size-8 dark:text-muted-foreground lg:size-12" />
                   </div>
                 )
               })}
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </TabsContent>
   )
 }

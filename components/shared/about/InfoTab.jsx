@@ -1,3 +1,5 @@
+"use client"
+import { motion } from "framer-motion"
 import { TabsContent } from "@/components/ui/tabs"
 import { infoData } from "@/lib/constants"
 import Link from "next/link"
@@ -5,7 +7,13 @@ import Link from "next/link"
 const InfoTab = () => {
   return (
     <TabsContent value="personal">
-      <div className="rounded-xl bg-orange-200/30 p-4 text-center backdrop-blur-lg backdrop-filter dark:bg-indigo-950/40 lg:text-left">
+      <motion.div
+        initial={{ x: 10, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: 10, opacity: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="rounded-xl bg-orange-200/30 p-4 text-center backdrop-blur-lg backdrop-filter dark:bg-secondary/40 lg:text-left"
+      >
         <h3 className="mb-4 text-2xl font-bold">
           I am a full-stack software developer
         </h3>
@@ -38,7 +46,7 @@ const InfoTab = () => {
           <div className="border-b border-border"></div>
           <p>English, Vietnamese</p>
         </div>
-      </div>
+      </motion.div>
     </TabsContent>
   )
 }

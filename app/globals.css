@@ -71,7 +71,7 @@
 }
 
 .logo {
-  @apply before:bg-logo_light before:dark:bg-logo_dark before:h-[30px] before:w-[30px] before:bg-center before:bg-no-repeat;
+  @apply before:h-[30px] before:w-[30px] before:bg-logo_light before:bg-center before:bg-no-repeat before:dark:bg-logo_dark;
 }
 .h1 {
   @apply text-6xl font-bold tracking-[-2px] xl:text-[72px] xl:leading-[80px];
@@ -80,5 +80,9 @@
   @apply mb-8 text-lg font-light text-muted-foreground;
 }
 .section-title {
-  @apply before:bg-dots_light before:dark:bg-dots_dark relative flex w-max items-center justify-between gap-4 text-5xl font-bold before:h-[24px] before:w-[24px] before:bg-center before:bg-no-repeat;
+  @apply relative flex w-max items-center justify-between gap-4 text-5xl font-bold before:h-[24px] before:w-[24px] before:bg-dots_light before:bg-center before:bg-no-repeat before:dark:bg-dots_dark;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-primary !important;
 }

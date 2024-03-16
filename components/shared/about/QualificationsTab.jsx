@@ -1,6 +1,7 @@
+"use client"
+import { motion } from "framer-motion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { qualificationData } from "@/lib/constants"
-
 import { Briefcase, GraduationCap } from "lucide-react"
 
 const QualificationsTab = () => {
@@ -9,7 +10,13 @@ const QualificationsTab = () => {
   }
   return (
     <TabsContent value="qualifications">
-      <div className="rounded-xl bg-orange-200/30 p-4 text-center backdrop-blur-lg backdrop-filter dark:bg-indigo-950/30 lg:text-left">
+      <motion.div
+        initial={{ x: 10, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: -10, opacity: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="rounded-xl bg-orange-200/30 p-4 text-center backdrop-blur-lg backdrop-filter dark:bg-secondary/40 lg:text-left"
+      >
         <h3 className="my-8 text-center text-2xl font-bold">
           My Awesome Journey
         </h3>
@@ -32,15 +39,20 @@ const QualificationsTab = () => {
               </TabsTrigger>
             </TabsList>
             <TabsContent value={getData(qualificationData, "experience").title}>
-              <div className="mt-4 flex w-full flex-col gap-8">
+              <motion.div
+              initial={{ x: -10, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 10, opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="mt-4 flex w-full flex-col gap-8">
                 {getData(qualificationData, "experience").data.map(
                   (item, idx) => (
                     <div
                       key={idx}
-                      className="group flex h-[150px] gap-4 max-lg:h-auto"
+                      className="group flex min-h-[150px] gap-4 max-lg:h-auto"
                     >
-                      <div className="relative h-full w-[1px] py-4 max-lg:hidden">
-                        <div className="h-full w-[1px] bg-muted-foreground"></div>
+                      <div className="relative h-auto w-[1px] py-4 max-lg:hidden">
+                        <div className="h-auto w-[1px] bg-muted-foreground"></div>
                         <div className="absolute -left-1 top-4 h-[10px] w-[10px] rounded-full bg-primary transition-all duration-500 group-hover:translate-y-[118px]"></div>
                       </div>
                       <div className="flex w-full flex-col items-center justify-center gap-2 border-b border-border">
@@ -57,14 +69,19 @@ const QualificationsTab = () => {
                     </div>
                   ),
                 )}
-              </div>
+              </motion.div>
             </TabsContent>
             <TabsContent value={getData(qualificationData, "education").title}>
               {/* DATA */}
-              <div className="mt-4 flex w-full flex-col gap-8">
+              <motion.div
+               initial={{ x: -10, opacity: 0 }}
+               animate={{ x: 0, opacity: 1 }}
+               exit={{ x: 10, opacity: 0 }}
+               transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="mt-4 flex w-full flex-col gap-8">
                 {getData(qualificationData, "education").data.map(
                   (item, idx) => (
-                    <div key={idx} className="group flex h-[80px] gap-4 ">
+                    <div key={idx} className="group flex min-h-[80px] gap-4 ">
                       <div className="relative h-full w-[1px] py-4 max-lg:hidden">
                         <div className="h-full w-[1px] bg-muted-foreground"></div>
                         <div className="absolute -left-1 top-4 h-[10px] w-[10px] rounded-full bg-primary transition-all duration-500 group-hover:translate-y-[48px]"></div>
@@ -83,11 +100,11 @@ const QualificationsTab = () => {
                     </div>
                   ),
                 )}
-              </div>
+              </motion.div>
             </TabsContent>
           </Tabs>
         </div>
-      </div>
+      </motion.div>
     </TabsContent>
   )
 }
