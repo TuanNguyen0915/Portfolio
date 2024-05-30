@@ -17,11 +17,14 @@ const Description = () => {
       </p>
       <div className="mb-12 flex gap-4 max-lg:flex-col">
         <Link href="/contact">
-          <Button className="gap-2">
+          <Button className="gap-2 hover:brightness-125">
             Contact me <Send size={18} />
           </Button>
         </Link>
-        <Link href="/contact">
+        <Link
+          href="https://docs.google.com/document/d/1p7bVWegf957LCUH3wjxbnQrTQxHEwKsgn_6cLPO335k"
+          target="_blank"
+        >
           <Button
             variant="secondary"
             className="gap-2 transition-all hover:border hover:border-primary hover:bg-transparent hover:text-primary"

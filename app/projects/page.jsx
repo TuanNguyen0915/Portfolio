@@ -28,7 +28,7 @@ const ProjectPage = () => {
       <div className="container mx-auto">
         <h1 className="h1 mx-auto mb-8 text-center xl:mb-16">My Projects</h1>
         <Tabs defaultValue={category}>
-          <TabsList className="mx-auto mb-12 grid h-full w-full grid-cols-1 rounded-full dark:border-none md:grid-cols-4 md:border">
+          <TabsList className="mx-auto mb-12 grid h-full w-full grid-cols-1 rounded-full dark:border-none md:grid-cols-5 md:border">
             {categories.map((item, idx) => (
               <TabsTrigger
                 onClick={() => setCategory(item)}
