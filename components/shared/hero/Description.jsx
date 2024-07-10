@@ -26,6 +26,8 @@ const Description = () => {
           target="_blank"
         >
           <Button
+            href="https://drive.google.com/file/d/1OWeWAuvbt9uBGs89TiQnXw2uIig-UCAy/view"
+            target="_blank"
             variant="secondary"
             className="gap-2 transition-all hover:border hover:border-primary hover:bg-transparent hover:text-primary"
           >
